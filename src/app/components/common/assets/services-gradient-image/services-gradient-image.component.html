@@ -1,1 +1,26 @@
-<p>services-gradient-image works!</p>
+<div class="absolute top-0 -left-[10rem] w-[56.625rem] h-[56.625rem] opacity-50 mix-blend-color-dodge pointer-events-none"
+  *ngIf="type==='services'">
+  <img
+    [ngSrc]="gradient"
+    class="absolute top-1/2 left-1/2 w-[79.5625rem] max-w-[79.5625rem] h-[88.5625rem] -translate-x-1/2 -translate-y-1/2"
+    width="1417"
+    height="1417"
+    alt="Gradient"
+    priority
+  />
+</div>
+
+
+<div *ngIf="type==='roadmap'"
+  class="absolute top-[18.25rem] -left-[30.375rem] w-[56.625rem] opacity-60 mix-blend-color-dodge pointer-events-none">
+  <div [class]="divClass">
+    <img
+      [class]="imageClass"
+      [ngSrc]="gradient"
+      width="942"
+      height="942"
+      alt="Gradient"
+      priority
+    />
+  </div>
+</div>

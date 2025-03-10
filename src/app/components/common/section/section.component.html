@@ -1,1 +1,18 @@
-<p>section works!</p>
+<div
+  [ngClass]="{
+  customPaddings: customPaddings,
+  'py-10 lg:py-16 xl:py-20': !customPaddings,
+  'lg:py-32 xl:py-40': crosses,
+  '': !crosses
+  } "
+  [class]="className"
+  class="relative "
+>
+  <ng-content></ng-content>
+  <div class="hidden absolute top-0 left-5 w-0.25 bg-stroke-1 pointer-events-none md:block lg:left-7.5 xl:left-10"></div>
+  <div class="hidden absolute top-0 right-5 w-0.25 bg-stroke-1 pointer-events-none md:block lg:right-7.5 xl:right-10"></div>
+  <ng-container *ngIf="crosses">
+    <div class="hidden absolute top-0 left-7.5 right-7.5 h-0.25 bg-stroke-1 pointer-events-none lg:block xl:left-10 xl:right-10" [ngClass]="crossOffset" ></div>
+    <app-section-svg [crossOffset]="crossOffset"></app-section-svg>
+  </ng-container>
+</div>

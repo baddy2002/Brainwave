@@ -12,33 +12,37 @@ export const navigation = [
   {
     id: "0",
     title: "Features",
-    url: "#features",
+    url: "features",
+    onlyMobile: false,
   },
   {
     id: "1",
     title: "Pricing",
-    url: "#pricing",
+    url: "pricing",
+    onlyMobile: false,
   },
   {
     id: "2",
     title: "How to use",
-    url: "#how-to-use",
+    url: "how-to-use",
+    onlyMobile: false,
   },
   {
     id: "3",
     title: "Roadmap",
-    url: "#roadmap",
+    url: "roadmap",
+    onlyMobile: false,
   },
   {
     id: "4",
     title: "New account",
-    url: "#signup",
+    url: "signup",
     onlyMobile: true,
   },
   {
     id: "5",
     title: "Sign in",
-    url: "#login",
+    url: "login",
     onlyMobile: true,
   },
 ];
@@ -80,6 +84,7 @@ export const roadmap = [
     date: "May 2023",
     status: "progress",
     imageUrl: roadmap2,
+    colorful: false,
   },
   {
     id: "2",
@@ -88,6 +93,7 @@ export const roadmap = [
     date: "May 2023",
     status: "done",
     imageUrl: roadmap3,
+    colorful: false,
   },
   {
     id: "3",
@@ -96,6 +102,7 @@ export const roadmap = [
     date: "May 2023",
     status: "progress",
     imageUrl: roadmap4,
+    colorful: false,
   },
 ];
 
@@ -111,10 +118,12 @@ export const collabContent = [
   {
     id: "1",
     title: "Smart Automation",
+    text: null,
   },
   {
     id: "2",
     title: "Top-notch Security",
+    text: null,
   },
 ];
 
@@ -125,6 +134,7 @@ export const collabApps = [
     icon: figma,
     width: 26,
     height: 36,
+    text: null,
   },
   {
     id: "1",
@@ -132,6 +142,7 @@ export const collabApps = [
     icon: notion,
     width: 34,
     height: 36,
+    text: null,
   },
   {
     id: "2",
@@ -139,6 +150,7 @@ export const collabApps = [
     icon: discord,
     width: 36,
     height: 28,
+    text: null,
   },
   {
     id: "3",
@@ -146,6 +158,7 @@ export const collabApps = [
     icon: slack,
     width: 34,
     height: 35,
+    text: null,
   },
   {
     id: "4",
@@ -153,6 +166,7 @@ export const collabApps = [
     icon: photoshop,
     width: 34,
     height: 34,
+    text: null,
   },
   {
     id: "5",
@@ -160,6 +174,7 @@ export const collabApps = [
     icon: protopie,
     width: 34,
     height: 34,
+    text: null,
   },
   {
     id: "6",
@@ -167,6 +182,7 @@ export const collabApps = [
     icon: framer,
     width: 26,
     height: 34,
+    text: null,
   },
   {
     id: "7",
@@ -174,6 +190,7 @@ export const collabApps = [
     icon: raindrop,
     width: 38,
     height: 32,
+    text: null,
   },
 ];
 
@@ -221,6 +238,7 @@ export const benefits = [
     backgroundUrl: "assets/benefits/card-1.svg",
     iconUrl: benefitIcon1,
     imageUrl: benefitImage2,
+    light: false,
   },
   {
     id: "1",
@@ -238,6 +256,7 @@ export const benefits = [
     backgroundUrl: "assets/benefits/card-3.svg",
     iconUrl: benefitIcon3,
     imageUrl: benefitImage2,
+    light: false,
   },
   {
     id: "3",
@@ -255,6 +274,7 @@ export const benefits = [
     backgroundUrl: "assets/benefits/card-5.svg",
     iconUrl: benefitIcon1,
     imageUrl: benefitImage2,
+    light: false,
   },
   {
     id: "5",
@@ -263,6 +283,7 @@ export const benefits = [
     backgroundUrl: "assets/benefits/card-6.svg",
     iconUrl: benefitIcon2,
     imageUrl: benefitImage2,
+    light: false,
   },
 ];
 

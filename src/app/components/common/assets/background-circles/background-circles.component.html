@@ -1,1 +1,64 @@
-<p>background-circles works!</p>
+<div class="absolute -top-[42.375rem] left-1/2 w-[78rem] aspect-square border border-n-2/5 rounded-full -translate-x-1/2 md:-top-[38.5rem] xl:-top-[32rem]">
+  <app-rings></app-rings>
+
+  <!-- Moving background colored circle balls -->
+  <div class="absolute bottom-1/2 left-1/2 w-0.25 h-1/2 origin-bottom rotate-[50deg]">
+    <div
+      appParallax
+      isParallaxChild="true"
+      [intensity]="10"
+      class="w-2 h-2 -ml-1 -mt-36 bg-gradient-to-b from-[#DD734F] to-[#1A1A32] rounded-full transition-transform duration-500 ease-out"
+      [ngClass]="{'translate-y-0 opacity-100': mounted, 'translate-y-10 opacity-0': !mounted}">
+    </div>
+  </div>
+
+  <div class="absolute bottom-1/2 left-1/2 w-0.25 h-1/2 origin-bottom -rotate-[56deg]">
+    <div
+      appParallax
+      isParallaxChild="true"
+      [intensity]="15"
+      class="w-4 h-4 -ml-1 -mt-32 bg-gradient-to-b from-[#DD734F] to-[#1A1A32] rounded-full transition-transform duration-500 ease-out"
+      [ngClass]="{'translate-y-0 opacity-100': mounted, 'translate-y-10 opacity-0': !mounted}">
+    </div>
+  </div>
+
+  <div class="absolute bottom-1/2 left-1/2 w-0.25 h-1/2 origin-bottom rotate-[54deg] xl:block">
+    <div
+      appParallax
+      isParallaxChild="true"
+      [intensity]="12"
+      class="w-4 h-4 -ml-1 mt-[12.9rem] bg-gradient-to-b from-[#B9AEDF] to-[#1A1A32] rounded-full transition-transform duration-500 ease-out"
+      [ngClass]="{'translate-y-0 opacity-100': mounted, 'translate-y-10 opacity-0': !mounted}">
+    </div>
+  </div>
+
+  <div class="absolute bottom-1/2 left-1/2 w-0.25 h-1/2 origin-bottom -rotate-[65deg]">
+    <div
+      appParallax
+      isParallaxChild="true"
+      [intensity]="18"
+      class="w-3 h-3 -ml-1.5 mt-52 bg-gradient-to-b from-[#B9AEDF] to-[#1A1A32] rounded-full transition-transform duration-500 ease-out"
+      [ngClass]="{'translate-y-0 opacity-100': mounted, 'translate-y-10 opacity-0': !mounted}">
+    </div>
+  </div>
+
+  <div class="absolute bottom-1/2 left-1/2 w-0.25 h-1/2 origin-bottom -rotate-[85deg]">
+    <div
+      appParallax
+      isParallaxChild="true"
+      [intensity]="20"
+      class="w-6 h-6 -ml-3 -mt-3 bg-gradient-to-b from-[#88E5BE] to-[#1A1A32] rounded-full transition-transform duration-500 ease-out"
+      [ngClass]="{'translate-y-0 opacity-100': mounted, 'translate-y-10 opacity-0': !mounted}">
+    </div>
+  </div>
+
+  <div class="absolute bottom-1/2 left-1/2 w-0.25 h-1/2 origin-bottom rotate-[70deg]">
+    <div
+      appParallax
+      isParallaxChild="true"
+      [intensity]="18"
+      class="w-6 h-6 -ml-3 -mt-3 bg-gradient-to-b from-[#88E5BE] to-[#1A1A32] rounded-full transition-transform duration-500 ease-out"
+      [ngClass]="{'translate-y-0 opacity-100': mounted, 'translate-y-10 opacity-0': !mounted}">
+    </div>
+  </div>
+</div>

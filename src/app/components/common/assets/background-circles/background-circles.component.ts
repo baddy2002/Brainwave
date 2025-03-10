@@ -1,11 +1,25 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import {NgClass} from '@angular/common';
+import {RingsComponent} from '../rings/rings.component';
+import {ParallaxDirective} from '../../../../directives/parallax.directive';
 
 @Component({
   selector: 'app-background-circles',
-  imports: [],
   templateUrl: './background-circles.component.html',
-  styleUrl: './background-circles.component.css'
+  imports: [
+    NgClass,
+    RingsComponent,
+    ParallaxDirective
+  ],
+  styleUrls: ['./background-circles.component.css']
 })
-export class BackgroundCirclesComponent {
+export class BackgroundCirclesComponent implements OnInit {
+  @Input() parallaxRef: any;
+  mounted = false;
 
+  ngOnInit(): void {
+    setTimeout(() => {
+      this.mounted = true;
+    }, 0);
+  }
 }

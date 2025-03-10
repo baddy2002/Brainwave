@@ -4,7 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-clip-path',
   imports: [],
   templateUrl: './clip-path.component.html',
-  styleUrl: './clip-path.component.css'
 })
 export class ClipPathComponent {
 

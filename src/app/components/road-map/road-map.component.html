@@ -1,1 +1,53 @@
-<p>road-map works!</p>
+<app-section class="overflow-hidden" id="roadmap">
+  <div class="container md:pb-10">
+    <app-heading tag="Ready to get started" title="What we’re working on"></app-heading>
+
+    <div class="relative grid gap-6 md:grid-cols-2 md:gap-4 md:pb-[7rem]">
+      <ng-container *ngFor="let item of roadmap">
+        <div
+          [accessKey]="item.id"
+          class="md:flex even:md:translate-y-[7rem] p-0.25 rounded-[2.5rem]"
+          [ngClass]="{
+            'bg-conic-gradient': item.colorful,
+            'bg-n-6': !item.colorful
+          }"
+        >
+          <div class="relative p-8 bg-n-8 rounded-[2.4375rem] overflow-hidden xl:p-15">
+            <div class="absolute top-0 left-0 max-w-full">
+              <img class="w-full" [ngSrc]="grid" width="550" height="550" alt="Grid" />
+            </div>
+
+            <div class="relative z-1">
+              <div class="flex items-center justify-between max-w-[27rem] mb-8 md:mb-20">
+                <app-tag-line>{{ item.date }}</app-tag-line>
+
+                <div class="flex items-center px-4 py-1 bg-n-1 rounded text-n-8">
+                  <img
+                    class="mr-2.5"
+                    [ngSrc]="item.status === 'done' ? check2 : loading1"
+                    width="16"
+                    height="16"
+                    [alt]="item.status === 'done' ? 'Done' : 'In Progress'"
+                  />
+                  <div class="tagline">{{ item.status === 'done' ? 'Done' : 'In Progress' }}</div>
+                </div>
+              </div>
+
+              <div class="mb-10 -my-10 -mx-15">
+                <img class="w-full" [ngSrc]="item.imageUrl" width="628" height="426" [alt]="item.title" />
+              </div>
+
+              <h4 class="h4 mb-4">{{ item.title }}</h4>
+              <p class="body-2 text-n-4">{{ item.text }}</p>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+      <app-services-gradient-image type="roadmap"></app-services-gradient-image>
+    </div>
+
+    <div class="flex justify-center mt-12 md:mt-15 xl:mt-20">
+      <app-button href="/roadmap">Our roadmap</app-button>
+    </div>
+  </div>
+</app-section>

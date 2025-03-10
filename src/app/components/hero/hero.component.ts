@@ -1,14 +1,17 @@
 import { Component } from '@angular/core';
-import {SectionComponent} from '../section/section.component';
+import {SectionComponent} from '../common/section/section.component';
 import {NgForOf, NgOptimizedImage} from '@angular/common';
 
-import {curve, robot, heroBackground, gradient} from '../../../../../public/assets';
-import {ButtonComponent} from '../button/button.component';
-import {heroIcons} from '../../../managements';
-import {ParallaxDirective} from '../../../directives/parallax.directive';
-import {GradientComponent} from '../assets/gradient/gradient.component';
-import {BackgroundCirclesComponent} from '../assets/background-circles/background-circles.component';
-import {BottomLineComponent} from '../assets/bottom-line/bottom-line.component';
+import {curve, robot, heroBackground, gradient} from '../../../../public/assets';
+import {ButtonComponent} from '../common/button/button.component';
+import {heroIcons} from '../../managements';
+import {ParallaxDirective} from '../../directives/parallax.directive';
+import {GradientComponent} from '../common/assets/gradient/gradient.component';
+import {BackgroundCirclesComponent} from '../common/assets/background-circles/background-circles.component';
+import {BottomLineComponent} from '../common/assets/bottom-line/bottom-line.component';
+import {GeneratingComponent} from '../generating/generating.component';
+import {NotificationComponent} from '../notification/notification.component';
+import {CompanyLogosComponent} from '../common/company-logos/company-logos.component';
 
 @Component({
   selector: 'app-hero',
@@ -20,10 +23,12 @@ import {BottomLineComponent} from '../assets/bottom-line/bottom-line.component';
     ParallaxDirective,
     GradientComponent,
     BackgroundCirclesComponent,
-    BottomLineComponent
+    BottomLineComponent,
+    GeneratingComponent,
+    NotificationComponent,
+    CompanyLogosComponent
   ],
   templateUrl: './hero.component.html',
-  styleUrl: './hero.component.css'
 })
 export class HeroComponent {
   curve: string = curve;

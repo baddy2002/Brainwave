@@ -1,1 +1,19 @@
-<p>button works!</p>
+<ng-template #contentTemplate>
+  <span [className]="spanClasses">
+    <ng-content></ng-content>
+  </span>
+</ng-template>
+
+<ng-container *ngIf="href === ''">
+  <button [className]="classes" (click)="handleClick()">
+    <ng-container *ngTemplateOutlet="contentTemplate"></ng-container>
+    <app-button-svg [white]="white"></app-button-svg>
+  </button>
+</ng-container>
+
+<ng-container *ngIf="href !== ''">
+  <a [className]="classes" [href]="href">
+    <ng-container *ngTemplateOutlet="contentTemplate"></ng-container>
+    <app-button-svg [white]="white"></app-button-svg>
+  </a>
+</ng-container>
