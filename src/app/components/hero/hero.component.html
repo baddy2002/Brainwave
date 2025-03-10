@@ -1,0 +1,68 @@
+<app-section
+    class="pt-[12rem] -mt-[5.25rem]"
+    crosses
+    crossOffset="lg:translate-y-[5.25rem]"
+    customPaddings="true"
+    id="hero"
+>
+  <div class="container relative"
+       appParallax
+       [parallaxType]="'FOLLOW'"
+       [intensity]="5"
+       isParallaxContainer="true"
+       parallaxTransitionDuration="0.6">
+    <div class="relative z-1 max-w-[62rem] mx-auto text-center mb-[3.875rem] md:mb-20 lg:mb-[6.25rem]">
+        <h1 class="h1 mb-6 ">Explore the Possibilities of&nbsp;AI&nbsp;Chatting with
+          <span class="inline-block relative">
+        Brainwave
+        <img
+          [ngSrc]="curve"
+          class="absolute top-full left-0 w-full xl:-mt-2"
+          height="28"
+          width="624"
+          alt="Curve"
+        />
+      </span>
+        </h1>
+      <p class="body-1 max-w-3xl mx-auto mb-6 text-n-2 lg:mb-8">
+        Unleash the power of AI within Brainwave. Upgrade your productivity
+        with Brainwave, the open AI chat app.
+      </p>
+      <app-button href="/pricing" white="true">
+         Get Started
+      </app-button>
+
+    </div>
+    <div class="relative max-w-[23rem] mx-auto md:max-w-5xl xl:mb-24" >
+      <div class="relative z-1 p-0.5 rounded-2xl bg-conic-gradient">
+        <div class="relative bg-n-8 rounded-[1rem]">
+          <div class="h-[1.4rem] gb-n-10 rounded-t-[0.9rem]">
+
+          </div>
+          <div class="aspect-[33/40] rounded-b-[0.9rem] overflow-hidden md:aspect-[688/490] lg:aspect-[1024/490]">
+
+            <img [ngSrc]="robot" class="w-full scale-[1.7] translate-y-[8%] md:scale-[1] md:-translate-y-[10%] lg:-translate-y-[23%]" height="490" width="1024" alt="Ai" priority>
+
+            <ul class="hidden absolute -left-[5.5rem] bottom-[7.5rem] px-1 py-1 bg-n-9/40 backdrop-blur border border-n-1/10 rounded-2xl xl:flex" appParallax parallaxType="HOVER_WITH_RETURN" parallaxTransitionDuration="0.4">
+              <li *ngFor="let icon of heroIcons" class="p-5">
+                <img [ngSrc]="icon" width="24" height="25" [alt]="icon" />
+              </li>
+            </ul>
+
+
+          </div>
+        </div>
+        <app-gradient></app-gradient>
+
+      </div>
+
+
+      <div class="absolute -top-[54%] left=1/2 w-[234%] -translate-x-1/2 md:-top[46%] md:w-[138%] lg:-top[104%]">
+        <img [ngSrc]="heroBackground" height="1800" width="1440" alt="Hero" priority>
+      </div>
+      <app-background-circles></app-background-circles>
+    </div>
+  </div>
+
+  <app-bottom-line></app-bottom-line>
+</app-section>

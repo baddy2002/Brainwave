@@ -1,0 +1,12 @@
+<div
+  [class]="className + ' max-w-[50rem] mx-auto mb-12 lg:mb-20 md:text-center'"
+>
+  <app-tag-line *ngIf="tag" class="mb-4 md:justify-center">
+    {{ tag }}
+  </app-tag-line>
+
+  <h2 *ngIf="title" class="h2">{{ title }}</h2>
+
+  <p *ngIf="text" class="body-2 mt-4 text-n-4">{{ text }}</p>
+</div>
+
