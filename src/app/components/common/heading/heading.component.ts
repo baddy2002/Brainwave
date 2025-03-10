@@ -1,8 +1,13 @@
 import {Component, Input} from '@angular/core';
+import {TagLineComponent} from '../tag-line/tag-line.component';
+import {NgIf} from '@angular/common';
 
 @Component({
   selector: 'app-heading',
-  imports: [],
+  imports: [
+    TagLineComponent,
+    NgIf
+  ],
   templateUrl: './heading.component.html',
 })
 export class HeadingComponent {

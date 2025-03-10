@@ -1,11 +1,16 @@
 import { Component } from '@angular/core';
+import {NgOptimizedImage} from '@angular/common';
+
+import {play} from '../../../../../../public/assets';
 
 @Component({
   selector: 'app-video-bar',
-  imports: [],
+  imports: [
+    NgOptimizedImage
+  ],
   templateUrl: './video-bar.component.html',
-  styleUrl: './video-bar.component.css'
 })
 export class VideoBarComponent {
 
+  protected readonly play = play;
 }

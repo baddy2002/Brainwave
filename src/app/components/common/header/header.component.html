@@ -1,1 +1,56 @@
-<p>header works!</p>
+<div
+  class="fixed top-0 left-0 w-full z-50 bg-n-8/90 backdrop-blur-sm border-p border-n-6 lg:bg-n-8/90 lg:backdrop-blur-sm"
+  [ngClass]="{
+  'bg-n-8' : openNavigation,
+  'bg-n-9/90 backdrop-blur-sm': !openNavigation
+  }"
+>
+  <div class="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
+    <a class="block w-[12rem] xl:mr-8" href="#hero">
+      <img ngSrc="/assets/brainwave.svg" width="190" height="40" alt="Brainwave" priority />
+    </a>
+    <nav
+      [ngClass]="{
+      'flex': openNavigation,
+      'hidden': !openNavigation
+      }"
+      class="fixed top-[5rem] left-0 right-0 bottom-0 bg-n-8 lg:static lg:flex lg:mx-auto lg:bg-transparent">
+      <div class="relative z-2 flex flex-col items-center justify-center m-auto lg:flex-row">
+        <ng-container *ngFor="let item of navigation">
+          <!--usare href invece che routerlink potrebbe in alcuni browser non permettere di avviare
+          l'evento onclick perchè è stata ricaricata la pagina, routerlink trasforma # in %23
+           quindi il percorso non verrebbe trovato, necessario usare fragment-->
+          <a
+            [accessKey]="item.id"
+            [routerLink]="[]"
+            [fragment]="item.url"
+            (click)="setOpenNavigation()"
+            class="block relative font-code text-2xl uppercase
+            text-n-1 transition-colors hover:text-color-1
+            px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-xs lg:font-semibold
+             lg:leading-5 lg:hover:text-n-1 cl:px-12"
+            [ngClass]="{
+            'lg:hidden': item.onlyMobile,
+            'z-2 lg:text-n-1': isActive(item.url),
+            'lg:text-n-1/50': !isActive(item.url)
+            }"
+          >
+            {{ item.title }}</a>
+        </ng-container>
+
+      </div>
+      <app-hamburger-menu></app-hamburger-menu>
+    </nav>
+
+    <a href="#signup" class="button hidden mr-8 text-n-1/50 transition-colors hover:text-n-1 lg:block">
+      New Account
+    </a>
+    <app-button class="hidden lg:flex" href="#login">
+      Login
+    </app-button>
+
+    <app-button class="ml-auto lg:hidden" (onClick)="setOpenNavigation()">
+      <app-menu-svg [openNavigation]="openNavigation"></app-menu-svg>
+    </app-button>
+  </div>
+</div>

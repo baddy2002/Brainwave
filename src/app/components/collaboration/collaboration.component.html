@@ -1,1 +1,73 @@
-<p>collaboration works!</p>
+<app-section crosses id="features">
+  <div class="container lg:flex">
+    <div class="max-w-[25rem]">
+      <h2 class="h2 mb-4 md:mb-8">
+      AI Chat App for seamless collaboration
+      </h2>
+
+      <ul class="max-w-[22rem] mb-10 md:mb-14">
+        <li
+          class="mb-3 py-3"
+          *ngFor="let item of collabContent; let i = index"
+        >
+          <div class="flex items-center">
+            <img [ngSrc]="check" width="24" height="24" alt="check" />
+            <h6 class="body-2 ml-5">{{ item.title }}</h6>
+          </div>
+          <ng-container *ngIf="item.text">
+            <p class="body-2 mt-3 text-n-4">{{ item.text }}</p>
+          </ng-container>
+        </li>
+
+      </ul>
+
+      <app-button>Try it now</app-button>
+    </div>
+
+    <div class="lg:ml-auto xl:w-[38rem] mt-4">
+      <p class="body-2 mb-8 text-n-4 md:mb-16 lg:mb-32 lg:w-[22rem] lg:mx-auto">
+      {{ collabText }}
+      </p>
+
+      <div class="relative left-1/2 flex w-[22rem] aspect-square border border-n-6 rounded-full -translate-x-1/2 scale:75 md:scale-100">
+        <div class="absolute top-1/2 left-1/2 w-[12rem] aspect-square border border-n-6 rounded-full -translate-x-1/2 -translate-y-1/2">
+          <div class="absolute top-1/2 left-1/2 w-[6rem] aspect-square p-[0.2rem] bg-conic-gradient rounded-full -translate-x-1/2 -translate-y-1/2">
+            <div class="flex items-center justify-center w-full h-full bg-n-8 rounded-full">
+              <img
+              [ngSrc]="brainwaveSymbol"
+              width="48"
+              height="48"
+              alt="brainwave"
+              />
+            </div>
+          </div>
+        </div>
+
+        <ul>
+          <li
+            *ngFor="let item of collabApps; let i = index"
+            class="absolute top-0 left-1/2 h-1/2 -ml-[1.6rem] origin-bottom"
+            [ngStyle]="{ transform: 'rotate(' + i * 45 + 'deg)' }"
+          >
+            <div
+              class="relative -top-[1.6rem] flex w-[3.2rem] h-[3.2rem] bg-n-7 border border-n-1/15 rounded-xl"
+              [ngStyle]="{ transform: '-rotate(' + i * 45 + 'deg)' }"
+            >
+              <img
+              class="m-auto"
+              [width]="item.width"
+              [height]="item.height"
+              [alt]="item.title"
+              [ngSrc]="item.icon"
+              />
+            </div>
+          </li>
+        </ul>
+
+        <app-left-curve></app-left-curve>
+        <app-right-curve></app-right-curve>
+      </div>
+    </div>
+  </div>
+
+</app-section>

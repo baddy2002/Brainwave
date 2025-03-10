@@ -1,11 +1,17 @@
 import { Component } from '@angular/core';
+import {NgOptimizedImage} from '@angular/common';
+import {brainwaveWhiteSymbol} from '../../../../../../public/assets';
+import {ChatBubbleWingComponent} from '../chat-bubble-wing/chat-bubble-wing.component';
 
 @Component({
   selector: 'app-video-chat-message',
-  imports: [],
+  imports: [
+    NgOptimizedImage,
+    ChatBubbleWingComponent
+  ],
   templateUrl: './video-chat-message.component.html',
-  styleUrl: './video-chat-message.component.css'
 })
 export class VideoChatMessageComponent {
 
+  protected readonly brainwaveWhiteSymbol = brainwaveWhiteSymbol;
 }

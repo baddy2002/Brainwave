@@ -1,1 +1,46 @@
-<p>pricing-list works!</p>
+<div class="flex gap-[1rem] max-lg:flex-wrap">
+  <div
+    *ngFor="let item of pricing;"
+    [accessKey]="item.id"
+    class="w-[19rem] max-lg:w-full h-full px-6 bg-n-8 border border-n-6 rounded-[2rem] lg:w-auto even:py-14 odd:py-8 odd:my-4
+    [&>h4]:first:text-color-2 [&>h4]:even:text-color-1 [&>h4]:last:text-color-3"
+  >
+    <h4 class="h4 mb-4">{{ item.title }}</h4>
+
+    <p class="body-2 min-h-[4rem] mb-3 text-n-1/50">
+      {{ item.description }}
+    </p>
+
+    <div class="flex items-center h-[5.5rem] mb-6">
+      <ng-container *ngIf="item.price" >
+        <div class="h3">$</div>
+        <div class="text-[5.5rem] leading-none font-bold">
+          {{item.price}}
+        </div>
+      </ng-container>
+    </div>
+
+    <app-button
+      class="w-full mb-6"
+      [white]="!!item.price"
+      [href]="item.price ? '/pricing' : 'mailto:contact@brainwavehelp.com'"
+    >
+      {{ item.price ? "Get started" : "Contact us" }}
+    </app-button>
+
+    <ul>
+      <li
+        *ngFor="let feature of item.features; let i = index;"
+        class="flex items-start py-5 border-t border-n-6"
+      >
+        <img
+          [ngSrc]="check"
+          width="24"
+          height="24"
+          alt="Check"
+        />
+        <p class="body-2 ml-4">{{ feature }}</p>
+      </li>
+    </ul>
+  </div>
+</div>

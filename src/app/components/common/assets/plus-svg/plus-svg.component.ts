@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
   selector: 'app-plus-svg',
@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './plus-svg.component.css'
 })
 export class PlusSvgComponent {
-
+  @Input() className: string = '';
 }

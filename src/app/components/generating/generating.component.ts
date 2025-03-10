@@ -1,11 +1,16 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
+import {NgClass, NgOptimizedImage} from '@angular/common';
+import {loading} from '../../../../public/assets';
 
 @Component({
   selector: 'app-generating',
-  imports: [],
-  templateUrl: './generating.component.html',
-  styleUrl: './generating.component.css'
+  imports: [
+    NgOptimizedImage,
+    NgClass
+  ],
+  templateUrl: './generating.component.html'
 })
 export class GeneratingComponent {
-
+  @Input() className: string = '';
+  protected readonly loading = loading;
 }

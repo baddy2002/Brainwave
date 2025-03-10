@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {companyLogos} from '../../../../managements';
+import {companyLogos} from '../../../managements';
 import {NgForOf, NgOptimizedImage} from '@angular/common';
 
 @Component({

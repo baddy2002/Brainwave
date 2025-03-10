@@ -1,11 +1,15 @@
 import { Component } from '@angular/core';
+import {NgOptimizedImage} from '@angular/common';
+import {curve1} from '../../../../../../public/assets';
 
 @Component({
   selector: 'app-left-curve',
-  imports: [],
+  imports: [
+    NgOptimizedImage
+  ],
   templateUrl: './left-curve.component.html',
-  styleUrl: './left-curve.component.css'
 })
 export class LeftCurveComponent {
 
+  protected readonly curve1 = curve1;
 }
